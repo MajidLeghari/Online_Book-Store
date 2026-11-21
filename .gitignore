@@ -55,5 +55,9 @@ out/
 backend/out/
 frontend/out/
 
+# System & Archive files
+*.zip
+create_submission_zip.py
+
 .DS_Store
 Thumbs.db
