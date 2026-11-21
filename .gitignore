@@ -1,0 +1,40 @@
+# ===============================
+# Frontend / Node
+# ===============================
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+*.local
+
+# Environment variables
+.env
+frontend/.env
+*.env.local
+
+# ===============================
+# Backend / Java / Maven
+# ===============================
+target/
+backend/target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/timing.properties
+
+# ===============================
+# IDE & System
+# ===============================
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+*.iws
+out/
+backend/out/
+frontend/out/
+
+.DS_Store
+Thumbs.db

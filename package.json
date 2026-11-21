@@ -1,0 +1,30 @@
+{
+  "name": "online-book-store-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-Stack Online Book Store Monorepo (Spring Boot 3.4 + React Vite + MySQL)",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "dev": "npm run dev --prefix frontend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "preview:frontend": "npm run preview --prefix frontend",
+    "lint:frontend": "npm run lint --prefix frontend",
+    "backend:build": "cd backend && ./mvnw clean package -DskipTests",
+    "backend:run": "cd backend && ./mvnw spring-boot:run"
+  },
+  "keywords": [
+    "monorepo",
+    "react",
+    "vite",
+    "spring-boot",
+    "mysql",
+    "bookstore",
+    "ecommerce"
+  ],
+  "author": "Majid Leghari",
+  "license": "MIT"
+}

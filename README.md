@@ -15,6 +15,7 @@ A complete, beginner-friendly, and production-ready online book store built with
 8. [API Endpoint Documentation](#api-endpoint-documentation)
 9. [Testing with Postman & JUnit](#testing-with-postman--junit)
 10. [System Architecture & Design Decisions](#system-architecture--design-decisions)
+11. [Monorepo & Cloud Deployment (Vercel & Docker)](#11-monorepo--cloud-deployment-vercel--docker)
 
 ---
 
@@ -242,3 +243,33 @@ All unit and integration tests run against the database to test:
 - **Backend Price Calculation:** All monetary calculations and subtotals are performed strictly on the backend to prevent frontend tampering.
 - **Transactional Consistency:** `@Transactional` safeguards checkout operations: if stock is insufficient for any item in the cart, the entire transaction rolls back.
 - **Cash on Delivery (COD):** Streamlined and risk-free checkout flow designed specifically for simple e-commerce operations.
+
+---
+
+## 11. Monorepo & Cloud Deployment (Vercel & Docker)
+
+### Monorepo Structure
+```text
+.
+├── backend/            # Spring Boot 3.4 (Java 21) REST API
+├── frontend/           # React 19 (Vite + MUI) SPA
+├── database/           # MySQL 8/9 schema & seed data
+├── docker-compose.yml  # Local multi-container orchestration
+├── package.json        # Monorepo workspaces & root scripts
+├── vercel.json         # Vercel SPA deployment configuration
+└── DEPLOYMENT.md       # Detailed step-by-step deployment guide
+```
+
+### Root Monorepo Commands
+From the project root:
+- **Build Frontend**: `npm run build`
+- **Start Frontend Dev**: `npm run dev`
+- **Build Backend**: `npm run backend:build`
+- **Start Full Stack with Docker**: `docker compose up --build`
+
+### Hosting on Vercel
+1. Import this repository into **Vercel**.
+2. Vercel will automatically detect `vercel.json` and build the frontend from `frontend/dist`.
+3. Set the environment variable `VITE_API_BASE_URL` to your production backend URL.
+4. For details on hosting the Spring Boot backend and MySQL database, see **[DEPLOYMENT.md](DEPLOYMENT.md)**.
+
