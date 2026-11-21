@@ -8,11 +8,17 @@ frontend/dist/
 .vite/
 frontend/.vite/
 *.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Environment variables
 .env
 frontend/.env
 *.env.local
+
+# Vercel deployment folder
+.vercel/
 
 # ===============================
 # Backend / Java / Maven
@@ -26,12 +32,25 @@ backend/target/
 .mvn/timing.properties
 
 # ===============================
+# Python & Temporary Database Cache
+# ===============================
+__pycache__/
+*.py[cod]
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Explicitly keep the SQLite seed/temp database
+!database/bookstore_db.sqlite
+
+# ===============================
 # IDE & System
 # ===============================
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/shelf/
+.idea/
+.vscode/
 *.iws
+*.iml
+*.ipr
 out/
 backend/out/
 frontend/out/
