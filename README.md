@@ -7,7 +7,9 @@
 [![Material UI](https://img.shields.io/badge/MUI-v5-007FFF.svg)](https://mui.com/)
 [![MySQL](https://img.shields.io/badge/MySQL-8%2F9-4479A1.svg)](https://www.mysql.com/)
 [![SQLite / Turso](https://img.shields.io/badge/SQLite%20%2F%20Turso-Ready-00D492.svg)](https://turso.tech/)
-[![Vercel](https://img.shields.io/badge/Vercel-Ready-black.svg)](https://vercel.com/)
+[![Live Demo on Vercel](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](https://onlinebook-store-alpha.vercel.app/)
+
+> 🌐 **Live Web Application (Vercel):** [https://onlinebook-store-alpha.vercel.app/](https://onlinebook-store-alpha.vercel.app/)
 
 A complete, beginner-friendly, and production-ready **Online Book Store** web application built with **Java 21 Spring Boot**, **React.js (Vite + Material UI)**, and **MySQL / SQLite (Turso)**.
 
